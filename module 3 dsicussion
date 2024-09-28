@@ -1,0 +1,31 @@
+public class Bunny
+{
+    public string Name;
+    public bool LikesCarrots;
+    public bool LikesHumans;
+
+    public Bunny() {}
+
+    public Bunny(string n)
+    {
+        Name = n;
+    }
+
+    public Bunny(string name, bool likesCarrots = false, bool likesHumans = false)
+    {
+        Name = name;
+        LikesCarrots = likesCarrots;
+        LikesHumans = likesHumans;
+    }
+}
+
+// Creating instances using object initializers
+Bunny b1 = new Bunny { Name = "Bo", LikesCarrots = true, LikesHumans = false };
+
+// Creating an instance using the constructor
+Bunny b2 = new Bunny("Bo") { LikesCarrots = true, LikesHumans = false };
+
+// Dumping the details of both bunnies
+b1.Dump();
+b2.Dump();
+
